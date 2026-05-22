@@ -1,1 +1,1 @@
-// Intentionally empty. The page is static for speed and readability.
+// Static page. No script is needed.

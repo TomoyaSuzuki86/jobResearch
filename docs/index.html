@@ -3,95 +3,160 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>転職先候補 比較メモ</title>
+    <title>転職先候補 比較レポート</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="page">
       <header class="header">
         <p class="kicker">転職先候補</p>
-        <h1>比較メモ</h1>
-        <p class="lead">結論だけを、短く。</p>
+        <h1>比較レポート</h1>
+        <p class="lead">大きく読み、必要なところだけ深く見る。</p>
       </header>
 
-      <section class="verdict" aria-label="全体判断">
-        <p class="eyebrow">全体判断</p>
-        <h2>どちらも「条件確認してから」。即決はしない。</h2>
+      <section class="hero-panel" aria-label="結論">
+        <p class="eyebrow">結論</p>
+        <h2>どちらも候補。ただし、入社前の書面確認が前提。</h2>
         <p>
-          仕事の変化は期待できる一方、収入低下と安全・法令面の確認が必要。
+          仕事の変化は期待できる。いっぽうで、収入低下・行政処分歴・公開情報の不一致は軽く見ない。
         </p>
       </section>
 
-      <section class="company-list" aria-label="会社別まとめ">
-        <article class="company-card">
-          <div class="company-head">
-            <p class="eyebrow">候補 1</p>
-            <h2>旅友</h2>
-          </div>
-          <p class="status good">慎重に進める</p>
-          <dl>
-            <div>
-              <dt>向いている点</dt>
-              <dd>観光・学校・空港・スポーツ輸送があり、仕事に変化がある。</dd>
-            </div>
-            <div>
-              <dt>気になる点</dt>
-              <dd>神奈川営業所を含む行政処分歴と、公開情報の不一致。</dd>
-            </div>
-            <div>
-              <dt>収入</dt>
-              <dd>公開求人では現在の年収維持は難しい可能性が高い。</dd>
-            </div>
-          </dl>
+      <nav class="jump" aria-label="ページ内メニュー">
+        <a href="#tabitomo">旅友</a>
+        <a href="#eastern">イースタン</a>
+        <a href="#compare">比較</a>
+        <a href="#decision">判断</a>
+      </nav>
+
+      <section id="tabitomo" class="company-section">
+        <div class="section-head">
+          <p class="eyebrow">候補 1</p>
+          <h2>旅友</h2>
+          <p class="status good">慎重推奨</p>
+        </div>
+
+        <article class="statement">
+          <h3>向いている理由</h3>
+          <p>
+            観光、校外学習、修学旅行、空港送迎、企業送迎、スポーツチーム輸送などがあり、路線バスのような反復より変化が大きい。
+          </p>
         </article>
 
-        <article class="company-card">
-          <div class="company-head">
-            <p class="eyebrow">候補 2</p>
-            <h2>イースタン企画</h2>
-          </div>
-          <p class="status caution">面接で見極める</p>
-          <dl>
-            <div>
-              <dt>向いている点</dt>
-              <dd>瀬谷区で近く、旅行・貸切・送迎の仕事がある。</dd>
-            </div>
-            <div>
-              <dt>気になる点</dt>
-              <dd>文書警告、旅行業処分、代表者表記などの不一致。</dd>
-            </div>
-            <div>
-              <dt>収入</dt>
-              <dd>公開求人水準は現在よりかなり下がる見込み。</dd>
-            </div>
-          </dl>
-        </article>
-      </section>
-
-      <section class="matrix" aria-label="比較表">
-        <h2>比べると</h2>
-        <div class="row">
-          <span>通いやすさ</span>
-          <strong>イースタン企画</strong>
-        </div>
-        <div class="row">
-          <span>仕事の面白さ</span>
-          <strong>旅友</strong>
-        </div>
-        <div class="row">
-          <span>収入維持</span>
-          <strong>どちらも弱い</strong>
-        </div>
-        <div class="row">
-          <span>安心感</span>
-          <strong>どちらも確認必須</strong>
+        <div class="detail-list">
+          <details open>
+            <summary>仕事の内容</summary>
+            <p>
+              旅行企画と輸送を自社でつなぐ中小規模の観光・送迎会社。横浜FC関連のチームバスや応援バスもあり、観光・スポーツ・イベント輸送が成長軸に見える。
+            </p>
+          </details>
+          <details>
+            <summary>通勤</summary>
+            <p>
+              現実的な勤務拠点は神奈川営業所。横浜市緑区長津田町で、公開求人では車通勤可・駐車場完備。
+            </p>
+          </details>
+          <details>
+            <summary>収入</summary>
+            <p>
+              公開求人では月給35万円以上、年収例は入社1年目540万円、4年目580万円。現在の年収800万円維持は難しい前提で見る。
+            </p>
+          </details>
+          <details>
+            <summary>安全・法令面</summary>
+            <p>
+              2016年から2023年に複数の行政処分・文書警告が確認される。特に2023年は神奈川営業所を含む処分があり、是正状況の確認が最重要。
+            </p>
+          </details>
+          <details>
+            <summary>気になる点</summary>
+            <p>
+              代表者、所在地、安全管理者、セーフティバス表記など、公開情報に不一致がある。更新漏れかもしれないが、入社判断では確認すべき材料。
+            </p>
+          </details>
         </div>
       </section>
 
-      <section class="final-note" aria-label="最終メモ">
-        <p class="eyebrow">最終メモ</p>
+      <section id="eastern" class="company-section">
+        <div class="section-head">
+          <p class="eyebrow">候補 2</p>
+          <h2>イースタン企画</h2>
+          <p class="status caution">面接で見極め</p>
+        </div>
+
+        <article class="statement">
+          <h3>向いている理由</h3>
+          <p>
+            瀬谷区で大和市から近く、旅行業・貸切バス・送迎を組み合わせた仕事がある。固定ルートより変化を求める希望とは合う。
+          </p>
+        </article>
+
+        <div class="detail-list">
+          <details open>
+            <summary>仕事の内容</summary>
+            <p>
+              企業、学校、冠婚葬祭の契約輸送に加え、学生団体や団体旅行など大型観光バスの仕事がある。正社員は大型観光へ育成する流れが見える。
+            </p>
+          </details>
+          <details>
+            <summary>通勤</summary>
+            <p>
+              本社は横浜市瀬谷区、バス事務所は三ツ境方面。大和市からは比較的近く、通勤面はかなり強い。
+            </p>
+          </details>
+          <details>
+            <summary>収入</summary>
+            <p>
+              公開求人の月額は22.1万から24.15万円、賞与実績は年2回計30万から35万円。会社PRの繁忙期水準を見ても、現在年収との差は大きい。
+            </p>
+          </details>
+          <details>
+            <summary>安全・法令面</summary>
+            <p>
+              貸切バス事業で2024年と2025年に文書警告、旅行業側でも2024年12月に行政処分が確認される。改善内容は面接前後で必ず確認。
+            </p>
+          </details>
+          <details>
+            <summary>気になる点</summary>
+            <p>
+              代表者名、会社年数、連絡先メールなどの公表情報に不一致がある。履歴事項全部証明書などで現物確認したい。
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="compare" class="compare-section">
+        <p class="eyebrow">比較</p>
+        <h2>優先順位で見る</h2>
+        <div class="compare-grid">
+          <article>
+            <span>通勤の近さ</span>
+            <strong>イースタン企画</strong>
+            <p>瀬谷区で、大和市から近い。</p>
+          </article>
+          <article>
+            <span>仕事の新鮮さ</span>
+            <strong>旅友</strong>
+            <p>観光・スポーツ輸送の幅が広い。</p>
+          </article>
+          <article>
+            <span>収入維持</span>
+            <strong>どちらも弱い</strong>
+            <p>年収800万円維持は難しい前提。</p>
+          </article>
+          <article>
+            <span>安心感</span>
+            <strong>どちらも要確認</strong>
+            <p>行政処分後の改善と情報整合性が鍵。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="decision" class="decision-section">
+        <p class="eyebrow">判断</p>
+        <h2>収入優先なら見送り寄り。変化優先なら面接へ。</h2>
         <p>
-          収入を優先するなら見送り寄り。変化のある運転を優先するなら、面接で条件を書面確認してから判断。
+          面接に進むなら、雇用条件、年収モデル、60歳以降の処遇、安全管理、行政処分後の改善を、口頭だけでなく書面で確認する。
         </p>
       </section>
     </main>
