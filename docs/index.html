@@ -3,132 +3,97 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>転職先候補まとめ</title>
+    <title>転職先候補 比較メモ</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="page">
-      <header class="hero">
-        <p class="label">調査レポート要約</p>
-        <h1>転職先候補まとめ</h1>
+      <header class="header">
+        <p class="kicker">転職先候補</p>
+        <h1>比較メモ</h1>
+        <p class="lead">結論だけを、短く。</p>
       </header>
 
-      <section class="summary" aria-label="結論">
-        <article class="result result-good">
-          <p class="company">旅友</p>
-          <h2>慎重に進める</h2>
-          <p>仕事の変化は大きい。年収低下と法令面は必ず確認。</p>
+      <section class="verdict" aria-label="全体判断">
+        <p class="eyebrow">全体判断</p>
+        <h2>どちらも「条件確認してから」。即決はしない。</h2>
+        <p>
+          仕事の変化は期待できる一方、収入低下と安全・法令面の確認が必要。
+        </p>
+      </section>
+
+      <section class="company-list" aria-label="会社別まとめ">
+        <article class="company-card">
+          <div class="company-head">
+            <p class="eyebrow">候補 1</p>
+            <h2>旅友</h2>
+          </div>
+          <p class="status good">慎重に進める</p>
+          <dl>
+            <div>
+              <dt>向いている点</dt>
+              <dd>観光・学校・空港・スポーツ輸送があり、仕事に変化がある。</dd>
+            </div>
+            <div>
+              <dt>気になる点</dt>
+              <dd>神奈川営業所を含む行政処分歴と、公開情報の不一致。</dd>
+            </div>
+            <div>
+              <dt>収入</dt>
+              <dd>公開求人では現在の年収維持は難しい可能性が高い。</dd>
+            </div>
+          </dl>
         </article>
 
-        <article class="result result-warn">
-          <p class="company">イースタン企画</p>
-          <h2>面接で見極める</h2>
-          <p>近さは魅力。収入と行政処分後の改善確認が必要。</p>
+        <article class="company-card">
+          <div class="company-head">
+            <p class="eyebrow">候補 2</p>
+            <h2>イースタン企画</h2>
+          </div>
+          <p class="status caution">面接で見極める</p>
+          <dl>
+            <div>
+              <dt>向いている点</dt>
+              <dd>瀬谷区で近く、旅行・貸切・送迎の仕事がある。</dd>
+            </div>
+            <div>
+              <dt>気になる点</dt>
+              <dd>文書警告、旅行業処分、代表者表記などの不一致。</dd>
+            </div>
+            <div>
+              <dt>収入</dt>
+              <dd>公開求人水準は現在よりかなり下がる見込み。</dd>
+            </div>
+          </dl>
         </article>
       </section>
 
-      <nav class="tabs" aria-label="会社切り替え">
-        <button class="tab active" type="button" data-target="tab-tabitomo">旅友</button>
-        <button class="tab" type="button" data-target="tab-eastern">イースタン</button>
-      </nav>
-
-      <section id="tab-tabitomo" class="panel active">
-        <h2>旅友</h2>
-
-        <div class="decision">
-          <p class="decision-label">判断</p>
-          <p class="decision-text">仕事重視なら候補。条件確認なしの入社は避ける。</p>
+      <section class="matrix" aria-label="比較表">
+        <h2>比べると</h2>
+        <div class="row">
+          <span>通いやすさ</span>
+          <strong>イースタン企画</strong>
         </div>
-
-        <div class="grid">
-          <article>
-            <h3>良い点</h3>
-            <ul>
-              <li>観光、学校、空港、企業、スポーツ輸送がある</li>
-              <li>神奈川営業所は長津田方面で通いやすい</li>
-              <li>同じ道の反復より変化が多い</li>
-            </ul>
-          </article>
-
-          <article>
-            <h3>注意点</h3>
-            <ul>
-              <li>年収800万円維持は難しそう</li>
-              <li>神奈川営業所を含む行政処分歴がある</li>
-              <li>公開情報に代表者や所在地の不一致がある</li>
-            </ul>
-          </article>
+        <div class="row">
+          <span>仕事の面白さ</span>
+          <strong>旅友</strong>
         </div>
-
-        <section class="checklist">
-          <h3>聞くこと</h3>
-          <button type="button" class="check">2023年処分の改善内容</button>
-          <button type="button" class="check">月収・年収の実例</button>
-          <button type="button" class="check">60歳以降の雇用条件</button>
-          <button type="button" class="check">点呼・拘束時間の運用</button>
-        </section>
+        <div class="row">
+          <span>収入維持</span>
+          <strong>どちらも弱い</strong>
+        </div>
+        <div class="row">
+          <span>安心感</span>
+          <strong>どちらも確認必須</strong>
+        </div>
       </section>
 
-      <section id="tab-eastern" class="panel">
-        <h2>イースタン企画</h2>
-
-        <div class="decision">
-          <p class="decision-label">判断</p>
-          <p class="decision-text">近さ重視なら面接へ。内定即受諾はしない。</p>
-        </div>
-
-        <div class="grid">
-          <article>
-            <h3>良い点</h3>
-            <ul>
-              <li>瀬谷区で大和市から近い</li>
-              <li>旅行、貸切、送迎があり仕事に変化がある</li>
-              <li>大型二種の経験を生かしやすい</li>
-            </ul>
-          </article>
-
-          <article>
-            <h3>注意点</h3>
-            <ul>
-              <li>公開求人の収入は現在より低い</li>
-              <li>2024年、2025年に文書警告がある</li>
-              <li>代表者名など公開情報に不一致がある</li>
-            </ul>
-          </article>
-        </div>
-
-        <section class="checklist">
-          <h3>聞くこと</h3>
-          <button type="button" class="check">行政処分後の再発防止策</button>
-          <button type="button" class="check">実際の配車内容</button>
-          <button type="button" class="check">65歳以降の処遇</button>
-          <button type="button" class="check">事故時の自己負担</button>
-        </section>
-      </section>
-
-      <section class="compare" aria-label="比較">
-        <h2>比較</h2>
-        <div class="compare-list">
-          <div>
-            <span>通いやすさ</span>
-            <strong>イースタン</strong>
-          </div>
-          <div>
-            <span>仕事の新鮮さ</span>
-            <strong>旅友</strong>
-          </div>
-          <div>
-            <span>収入維持</span>
-            <strong>どちらも厳しい</strong>
-          </div>
-          <div>
-            <span>入社前確認</span>
-            <strong>どちらも必須</strong>
-          </div>
-        </div>
+      <section class="final-note" aria-label="最終メモ">
+        <p class="eyebrow">最終メモ</p>
+        <p>
+          収入を優先するなら見送り寄り。変化のある運転を優先するなら、面接で条件を書面確認してから判断。
+        </p>
       </section>
     </main>
-
-    <script src="./script.js"></script>
   </body>
 </html>

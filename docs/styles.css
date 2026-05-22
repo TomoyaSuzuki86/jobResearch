@@ -1,14 +1,13 @@
 :root {
   color-scheme: light;
-  --bg: #f7f7f2;
-  --text: #17211c;
-  --muted: #59645f;
-  --line: #d9ddd2;
-  --card: #ffffff;
-  --green: #2f6b4f;
-  --amber: #9a651b;
-  --blue: #2f5f84;
-  --shadow: 0 10px 24px rgba(20, 28, 24, 0.08);
+  --paper: #fbfaf6;
+  --ink: #151817;
+  --sub: #5b625e;
+  --line: #d7d2c6;
+  --panel: #ffffff;
+  --green: #2f624d;
+  --gold: #876126;
+  --navy: #253d53;
 }
 
 * {
@@ -16,237 +15,211 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 21px;
 }
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(37, 61, 83, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(47, 98, 77, 0.08), transparent 38%),
+    var(--paper);
+  color: var(--ink);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.65;
 }
 
-button {
-  font: inherit;
-}
-
 .page {
-  width: min(960px, 100%);
+  width: min(920px, 100%);
   margin: 0 auto;
-  padding: 20px 14px 40px;
+  padding: 28px 16px 48px;
 }
 
-.hero {
-  padding: 16px 2px 18px;
+.header {
+  padding: 10px 0 24px;
+  border-bottom: 2px solid var(--ink);
 }
 
-.label,
-.company,
-.decision-label {
+.kicker,
+.eyebrow {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 700;
+  color: var(--sub);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 h1,
 h2,
-h3,
-p {
+p,
+dt,
+dd,
+strong {
   overflow-wrap: anywhere;
 }
 
 h1 {
-  margin: 4px 0 0;
-  font-size: 2.2rem;
-  line-height: 1.15;
+  margin: 4px 0 4px;
+  font-size: 2.65rem;
+  line-height: 1.05;
 }
 
 h2 {
-  margin: 0 0 14px;
+  margin: 0;
   font-size: 1.45rem;
-  line-height: 1.25;
+  line-height: 1.28;
 }
 
-h3 {
-  margin: 0 0 12px;
-  font-size: 1.12rem;
+.lead {
+  margin: 0;
+  color: var(--sub);
+  font-size: 1.08rem;
 }
 
-.summary {
-  display: grid;
-  gap: 12px;
-}
-
-.result,
-.panel,
-.compare {
-  background: var(--card);
+.verdict,
+.company-card,
+.matrix,
+.final-note {
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
 }
 
-.result {
-  padding: 18px;
-  border-left: 8px solid var(--green);
+.verdict {
+  margin-top: 18px;
+  padding: 20px;
+  border-left: 8px solid var(--navy);
 }
 
-.result-warn {
-  border-left-color: var(--amber);
+.verdict h2 {
+  margin-top: 6px;
 }
 
-.result h2 {
-  margin: 2px 0 8px;
-}
-
-.result p:last-child,
-.decision p:last-child {
+.verdict p:last-child {
   margin-bottom: 0;
 }
 
-.tabs {
+.company-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin: 18px 0 12px;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  padding: 8px 0;
-  background: var(--bg);
+  gap: 14px;
+  margin-top: 14px;
 }
 
-.tab {
-  min-height: 56px;
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  background: var(--card);
-  color: var(--text);
-  font-weight: 800;
+.company-card {
+  padding: 20px;
 }
 
-.tab.active {
-  border-color: var(--blue);
-  background: var(--blue);
-  color: #ffffff;
-}
-
-.panel {
-  display: none;
-  padding: 20px 16px;
-}
-
-.panel.active {
-  display: block;
-}
-
-.decision {
-  margin: 0 0 18px;
-  padding: 16px;
-  border-radius: 8px;
-  background: #eef5f1;
-  border: 1px solid #cbded2;
-}
-
-.decision-text {
-  margin: 4px 0 0;
-  font-size: 1.18rem;
-  font-weight: 800;
-  line-height: 1.45;
-}
-
-.grid {
-  display: grid;
+.company-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
   gap: 12px;
+  margin-bottom: 12px;
 }
 
-.grid article {
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fbfbf8;
+.status {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
-ul {
+.status.good {
+  background: var(--green);
+}
+
+.status.caution {
+  background: var(--gold);
+}
+
+dl {
+  display: grid;
+  gap: 0;
   margin: 0;
-  padding-left: 1.1em;
 }
 
-li + li {
-  margin-top: 10px;
+dl div {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
 }
 
-.checklist {
-  margin-top: 18px;
+dt {
+  margin-bottom: 4px;
+  color: var(--sub);
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
-.checklist h3 {
+dd {
+  margin: 0;
+  font-weight: 650;
+}
+
+.matrix {
+  margin-top: 14px;
+  padding: 20px;
+}
+
+.matrix h2 {
   margin-bottom: 10px;
 }
 
-.check {
-  width: 100%;
-  min-height: 58px;
-  margin-top: 8px;
-  padding: 12px 14px;
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  background: var(--card);
-  color: var(--text);
-  text-align: left;
-  font-weight: 750;
-}
-
-.check.done {
-  border-color: var(--green);
-  background: #e7f2eb;
-  color: #234c3a;
-}
-
-.check.done::before {
-  content: "済 ";
-}
-
-.compare {
-  margin-top: 14px;
-  padding: 20px 16px;
-}
-
-.compare-list {
-  display: grid;
-  gap: 10px;
-}
-
-.compare-list div {
+.row {
   display: grid;
   gap: 2px;
   padding: 14px 0;
   border-top: 1px solid var(--line);
 }
 
-.compare-list span {
-  color: var(--muted);
-  font-weight: 700;
+.row span {
+  color: var(--sub);
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
-.compare-list strong {
-  font-size: 1.18rem;
+.row strong {
+  font-size: 1.16rem;
 }
 
-@media (min-width: 720px) {
+.final-note {
+  margin-top: 14px;
+  padding: 20px;
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+}
+
+.final-note .eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.final-note p:last-child {
+  margin-bottom: 0;
+  font-size: 1.22rem;
+  font-weight: 800;
+  line-height: 1.48;
+}
+
+@media (min-width: 760px) {
   .page {
-    padding: 32px 24px 56px;
+    padding: 42px 28px 64px;
   }
 
-  .summary,
-  .grid {
+  .company-list {
     grid-template-columns: 1fr 1fr;
   }
 
-  .panel,
-  .compare {
+  .verdict,
+  .company-card,
+  .matrix,
+  .final-note {
     padding: 28px;
+  }
+
+  .row {
+    grid-template-columns: 12rem 1fr;
+    align-items: baseline;
   }
 }
